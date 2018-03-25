@@ -16,4 +16,4 @@ clobber: clean
 
 test::	ezusbcc
 	./ezusbcc <testwave.wvf
-
+	./ezusbcc gpif.c
