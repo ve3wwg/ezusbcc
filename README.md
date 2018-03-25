@@ -44,7 +44,7 @@ DECOMPILING:
 There is limited capability to decompile a gpif.c module into
  "assembler form". This decompile is unable to know when
 TRICTL is in effect, unless OE3 or OE2 are referenced. Other
-modes such as PF|EF|FF is also not known but emitted as such.
+modes such as PF|EF|FF are also not known but emitted as such.
 
 To decompile, specify a file name:
 
