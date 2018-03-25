@@ -1,0 +1,16 @@
+; Test waveform file for ezusbcc.cpp
+;
+; Comment header
+;
+	.TRICTL		1		; Assume TRICTL=1
+	.EP		4		; Assume for Endpoint 4
+	.WAVEFORM 	7		; Name this waveform7
+	.EPXGPIFFLGSEL	EF
+	SG+DN				; Simple NDP
+	J	RDY1 AND RDY1 $1 $0	; DP example
+	S+GDN	1 OE3 OE1 CTL3 CTL2
+	S+GDN	1 OE3 OE1 CTL1 CTL2
+	JS+GDN*	RDY0 AND RDY4 $1 $3
+	JSG	RDY0 XOR RDY2 OE3 CTL2 $1 $7
+	JSG	RDY0 /AND EF OE3 CTL1 $1 $5
+; End
